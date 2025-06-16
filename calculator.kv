@@ -1,0 +1,187 @@
+<rootWidget>:
+    orientation: 'vertical'
+    FloatLayout:
+        Label:
+            id: display
+            text: root.textOnScreen
+            font_size: 50
+            size_hint: 1, 0.2
+            pos_hint:{"x": 0, "top": 0.8}
+            color: 1,1,1,1
+        Button:
+            text:"0"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x" : 0, "y" : 0}
+            on_press: root.clicked('0')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"."
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.25, "y": 0}
+            on_press: root.clicked('.')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"√"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.50, "y": 0}
+            on_press: root.clicked('R')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"EXE"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.25, 0.125
+            pos_hint: {"x": 0.75, "y": 0}
+            on_press: root.displayAnswer()
+        Button:
+            text:"1"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0, "y": 0.13}
+            on_press: root.clicked('1')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"2"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.25, "y": 0.13}
+            on_press: root.clicked('2')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"3"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.5, "y": 0.13}
+            on_press: root.clicked('3')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"÷"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.25, 0.125
+            pos_hint: {"x": 0.75, "y": 0.13}
+            on_press: root.clicked('/')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"4"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0, "y": 0.26}
+            on_press: root.clicked('4')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"5"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.25, "y": 0.26}
+            on_press: root.clicked('5')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"6"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.5, "y": 0.26}
+            on_press: root.clicked('6')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"×"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.25, 0.125
+            pos_hint: {"x": 0.75, "y": 0.26} 
+            on_press: root.clicked('*')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"7"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0, "y": 0.39}  
+            on_press: root.clicked('7')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"8"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.25, "y": 0.39} 
+            on_press: root.clicked('8')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"9"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.5, "y": 0.39} 
+            on_press: root.clicked('9')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"-"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.25, 0.125
+            pos_hint: {"x": 0.75, "y": 0.39}
+            on_press: root.clicked('-')
+            on_release: root.displayText(self.text)
+        Button:
+            text:"AC"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0, "y": 0.52} 
+            on_press: root.clearScreen()
+        Button:
+            text:"M"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.25, "y": 0.52} 
+            on_press: root.clicked('M') 
+        Button:
+            text:"Back"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.245, 0.125
+            pos_hint: {"x": 0.5, "y": 0.52} 
+            on_press: root.clicked('B') 
+        Button:
+            text:"+"
+            background_normal: ""
+            background_color: 0.3, 0.3, 0.3, 1
+            color: 1,1,1,1
+            size_hint: 0.25, 0.125
+            pos_hint: {"x": 0.75, "y": 0.52} 
+            on_press: root.clicked('+') 
+            on_release: root.displayText(self.text)
+        

@@ -57,8 +57,13 @@ float fillVectors(std::vector <float> pythonNumbList, std::vector <char> pythonC
     return returnValue;
 }
 
+void mValueTransfer(float mValue){
+    answer = mValue;
+}
+
 
 
 PYBIND11_MODULE(logic, m){
     m.def("fillVectors", &fillVectors, "fillVectors"); 
+    m.def("mValueTransfer", &mValueTransfer, "mValueTransfer");
 }

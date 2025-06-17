@@ -21,6 +21,8 @@ def merger():
     for x in inputList:
         if isinstance(x, float):
             buffer += str(int(x)) 
+        elif x == '.':
+            buffer += '.'
         else:
             if buffer:
                 finalList.append(float(buffer))
@@ -53,9 +55,23 @@ def execute():
     print(answer)
     return str(answer)
 
-
 class rootWidget(FloatLayout):
     textOnScreen = StringProperty("")
+
+    def clickedM(self, button):
+        answer = float(execute())
+        self.textOnScreen = " "
+        numbers.clear()
+        operations.clear()
+        inputList.clear()
+        if button == '+':
+            logic.mValueTransfer(answer)
+        else:
+            logic.mValueTransfer(-answer)
+
+    def backButton(self):
+        inputList.pop()
+        self.textOnScreen = self.textOnScreen[:-1]
 
     def displayText(self, value):
         self.textOnScreen += value
@@ -66,12 +82,14 @@ class rootWidget(FloatLayout):
         numbers.clear()
         operations.clear()
         inputList.clear()
+        logic.mValueTransfer(0.0)
 
     def clearScreen(self):
         self.textOnScreen = ""
         numbers.clear()
         operations.clear()
         inputList.clear()
+        logic.mValueTransfer(0.0)
 
     def clicked(self, char):
         if char.isdigit():
